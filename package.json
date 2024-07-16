@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "name": "influencestyle",
+  "version": "1.0.0",
+  "description": "Here is my portfolio! @Theishdeveloper",
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "scripts": {
+    "main": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "InfluenceStyle"
+  },
+  "keywords": [
+    "fashion",
+    "developer",
+    "designer"
+  ],
+  "author": "_just_a_dev_",
+  "license": "ISC"
+}

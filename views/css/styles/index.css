@@ -1,0 +1,201 @@
+@import url('../global.css');
+
+.btn {
+    padding: 0.95em 1.25em;
+    border: 1px solid #fff;
+    display: inline-block;
+}
+
+.padding-l-r-20 h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 5% 0;
+}
+
+header {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/heros-image-1.webp');
+}
+
+.preloaded-image-2 {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/heros-image-2.webp');
+}
+
+.preloaded-image-3 {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/heros-image-3.webp');
+}
+
+.preloaded-image-4 {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/heros-image-4.webp');
+}
+
+.preloaded-image-5 {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/heros-image-5.webp');
+    background-position: center 50%;
+}
+
+.heros {
+    width: 95%;
+    height: 30vh;
+    padding: 0 20px;
+    margin: 30vh 0;
+    justify-content: space-between;
+}
+
+.heros .arrow {
+    width: 15%;
+    max-height: 30vh;
+    aspect-ratio: 1/1;
+    padding: 20px 0;
+    border-radius: 50%;
+    justify-content: center;
+    font-size: 3em;
+    opacity: 0.3;
+    transition: opacity 200ms, background-color 200ms;
+}
+
+.heros:hover .arrow {
+    opacity: 0.7;
+}
+
+.heros .arrow:hover {
+    background-color: rgb(255, 255, 255, 0.05);
+}
+
+.heros .arrow:first-of-type {
+    transform: rotate(-180deg);
+}
+
+.heros .heros-info {
+    text-align: center;
+}
+
+.heros-info h3 {
+    margin: 0;
+}
+
+.heros-info hgroup {
+    text-transform: uppercase;
+}
+
+.heros-info a {
+    text-transform: capitalize;
+}
+
+.shop-content {
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* .item {
+    flex: 0 1 20%;
+} */
+
+.shop-item>img {
+    max-height: 40vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.shop-item h4 {
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.most-recent-item,
+.older-posts {
+    gap: calc(20px + 5%);
+    align-items: flex-start;
+    margin: 5% 0 7%;
+}
+
+figure {
+    width: 50%;
+    border: 2px solid var(--brown);
+    position: relative;
+}
+
+figure figcaption {
+    content: "";
+    position: absolute;
+    color: var(--brown);
+    text-transform: uppercase;
+}
+
+figure img {
+    width: 100%;
+    max-height: 35vh;
+    object-fit: cover;
+    object-position: bottom;
+    transform: translate(15%, 10%);
+}
+
+.padding-l-r-20 :not(.shop) article {
+    text-align: left;
+    margin-top: 0.5%;
+}
+
+.padding-l-r-20 :not(.shop) article h2 {
+    text-transform: uppercase;
+    font-size: 1.25em;
+}
+
+.padding-l-r-20 :not(.shop) article a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 200ms;
+}
+
+.padding-l-r-20 :not(.shop) article a > .growing-line {
+    width: 0;
+    height: 2px;
+    background-color: var(--black);
+    transition: width 200ms, background-color 200ms;
+}
+
+.padding-l-r-20 :not(.shop) article a:hover  {
+    color: var(--brown);
+}
+
+.padding-l-r-20 :not(.shop) article a:hover .growing-line {
+    width: 20px;
+    margin-right: 10px;
+    background-color: var(--brown);
+}
+
+.most-recent-item:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.most-recent-item:nth-of-type(odd) figure figcaption {
+    left: -65px;
+    top: 20%;
+    transform: rotate(-90deg);
+}
+
+.most-recent-item:nth-of-type(even) figure figcaption {
+    top: 70px;
+    right: -70px;
+    transform: rotate(90deg);
+}
+
+.most-recent-item:nth-of-type(even) figure img {
+    width: 100%;
+    max-height: 35vh;
+    object-fit: cover;
+    transform: translate(-15%, 10%);
+}
+
+.older-posts {
+    width: 95%;
+    margin-block: 5%;
+    margin-inline: auto;
+    background-color: var(--black);
+    padding: 5%;
+    color: var(--white);
+}
+
+.older-posts article a {
+    color: var(--brown);
+}

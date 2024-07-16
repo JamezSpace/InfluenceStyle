@@ -1,0 +1,33 @@
+<nav class="grid">
+    <img src="" alt="custom logo" class="logo">
+    <ul class="nav-bar flex">
+        <a href="#">Shop</a>
+        <a href="/about">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Categories</a>
+        <a href="#">Search</a>
+    </ul>
+    <%- include('./socials') %>
+</nav>
+
+<style>
+    nav {
+        width: 95%;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "logo nav socials";
+        align-items: center;
+    }
+
+    nav .logo {
+        grid-area: logo;
+    }
+
+    .nav-bar {
+        grid-area: nav;
+        justify-content: space-evenly;
+    }
+
+    .socials {
+        grid-area: socials;
+    }
+</style>

@@ -1,0 +1,55 @@
+@import url('../global.css');
+
+.colored-brown {
+    color: var(--brown);
+}
+
+header {
+    background-image: linear-gradient(to bottom, rgb(0,0,0,0.5), rgb(0,0,0,0.1)), url('../../img/about-heros-image.webp');
+    background-position: center 50%;
+}
+
+.heros {
+    margin: 20vh 0 30vh;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.ish {
+    background-image: linear-gradient(to bottom, rgb(0,0,0,0.5), rgb(0,0,0,0.1)), url('../../img/im-ish.webp');
+    background-position: center 50%;
+    justify-content: center;
+}
+
+.ish h1 {
+    margin: 30vh 0;
+    color: var(--white);
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    text-transform: uppercase;
+    font-size: 1.75em;
+}
+.socials-listed {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.socials-listed a {
+    margin: 10px 0;
+    gap: 5px;
+}
+
+.socials-listed a :first-child {
+    font-size: 1.5em;
+}

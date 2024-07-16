@@ -1,0 +1,69 @@
+<footer>
+    <div class="flex">
+        <section class="info grid">
+            <img src="" alt="logo" class="logo">
+            <%- include('./socials') %>
+        </section>
+        <form action="" method="post" class="subscribe-to-newsletter">
+            <input type="email" name="" id="" placeholder="subscribe to newsletter">
+            <button type="submit"><iconify-icon icon="mingcute:arrow-right-line"></iconify-icon></button>
+        </form>
+    </div>
+
+    <p>&copy; 2024 InfluenceStyle ~ Designed by <span>IshDeveloper</span></p>
+</footer>
+
+<style>
+    footer {
+        padding: 2em 5%;
+        background-color: var(--black);
+        color: var(--white);
+        text-align: center;
+        display: flow-root;
+    }
+
+    footer .socials {
+        font-size: 1.2em;
+        margin: 15px 0;
+    }
+
+    div.flex {
+        justify-content: space-between;
+    }
+    
+    .info {
+        width: 50%;
+        grid-template-areas: "logo" "socials";
+    }
+
+    .subscribe-to-newsletter {
+        border-bottom: 1px solid var(--brown);
+        padding: 10px;
+    }
+
+    input[type="email"] {
+        padding: 0;
+        background-color: transparent;
+        line-height: 1.25em;
+        color: inherit;
+    }
+
+    input[type="email"]::placeholder {
+        color: rgb(from #000 /0.5);
+        text-transform: capitalize;
+    }
+
+    .subscribe-to-newsletter button {
+        color: var(--brown);
+        background-color: transparent;
+    }
+
+    footer p {
+        margin-bottom: 0;
+    }
+
+
+    footer p span {
+        color: var(--brown);
+    }
+</style>
