@@ -14,25 +14,21 @@
 }
 
 header {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/heros-image-1.webp');
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/webp/heros-image-1.webp');
 }
 
 .preloaded-image-2 {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/heros-image-2.webp');
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/webp/heros-image-2.webp');
 }
 
 .preloaded-image-3 {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/heros-image-3.webp');
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/webp/heros-image-3.webp');
 }
 
 .preloaded-image-4 {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/heros-image-4.webp');
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/webp/heros-image-4.webp');
 }
 
-.preloaded-image-5 {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/heros-image-5.webp');
-    background-position: center 50%;
-}
 
 .heros {
     width: 95%;
@@ -85,7 +81,7 @@ header {
 .shop-content {
     gap: 10px;
     justify-content: space-between;
-    flex-wrap: wrap;
+    overflow-x: scroll;
 }
 
 /* .item {
@@ -93,51 +89,91 @@ header {
 } */
 
 .shop-item>img {
-    max-height: 40vh;
+    min-width: 20vw;
+   max-height: 40vh;
     object-fit: cover;
     object-position: center;
 }
 
-.shop-item h4 {
-    margin: 10px 0;
-    text-transform: uppercase;
+.most-recent {
+    font-size: 105%;
 }
 
-.most-recent-item,
-.older-posts {
+.most-recent-item {
     gap: calc(20px + 5%);
     align-items: flex-start;
-    margin: 5% 0 7%;
+    margin: 0 0 7%;
 }
 
 figure {
-    width: 50%;
-    border: 2px solid var(--brown);
+    height: 50vh;
+    aspect-ratio: 1/1;
+    background-color: var(--brown);
     position: relative;
 }
 
-figure figcaption {
-    content: "";
-    position: absolute;
-    color: var(--brown);
-    text-transform: uppercase;
+figure img {
+    height: inherit;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    transform: translate(10%, 12%);
+    transition: transform 200ms ease;
 }
 
-figure img {
-    width: 100%;
-    max-height: 35vh;
-    object-fit: cover;
-    object-position: bottom;
-    transform: translate(15%, 10%);
+figure::after {
+    position: absolute;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+figure:hover img {
+    transform: translate(0, 0.5%);
+}
+
+figure[data-num="1"]::after {
+    content: "gentle luxury";
+}
+
+figure[data-num="2"]::after {
+    content: "spotlight";
+}
+
+figure[data-num="3"]::after {
+    content: "pinterest";
+}
+
+.most-recent-item:nth-of-type(odd) figure::after {
+    left: 2.5%;
+    bottom: -11%;
+    transition: 200ms ease;
+}
+
+.most-recent-item:nth-of-type(odd) figure:hover::after {
+    bottom: 1%;
+    opacity: 0;
+}
+
+.most-recent-item:nth-of-type(even) figure::after {
+    right: 2.5%;
+    bottom: -11%;
+    transition: 200ms ease;
+}
+
+.most-recent-item:nth-of-type(even) figure:hover::after {
+    bottom: -1%;
+    opacity: 0;
 }
 
 .padding-l-r-20 :not(.shop) article {
     text-align: left;
-    margin-top: 0.5%;
+    align-self: flex-end;
 }
 
 .padding-l-r-20 :not(.shop) article h2 {
     text-transform: uppercase;
+    font-family: serif;
     font-size: 1.25em;
 }
 
@@ -147,14 +183,14 @@ figure img {
     transition: color 200ms;
 }
 
-.padding-l-r-20 :not(.shop) article a > .growing-line {
+.padding-l-r-20 :not(.shop) article a>.growing-line {
     width: 0;
     height: 2px;
     background-color: var(--black);
     transition: width 200ms, background-color 200ms;
 }
 
-.padding-l-r-20 :not(.shop) article a:hover  {
+.padding-l-r-20 :not(.shop) article a:hover {
     color: var(--brown);
 }
 
@@ -168,34 +204,90 @@ figure img {
     flex-direction: row-reverse;
 }
 
-.most-recent-item:nth-of-type(odd) figure figcaption {
-    left: -65px;
-    top: 20%;
-    transform: rotate(-90deg);
-}
-
-.most-recent-item:nth-of-type(even) figure figcaption {
-    top: 70px;
-    right: -70px;
-    transform: rotate(90deg);
-}
-
 .most-recent-item:nth-of-type(even) figure img {
-    width: 100%;
-    max-height: 35vh;
-    object-fit: cover;
-    transform: translate(-15%, 10%);
+    transform: translate(-10%, 12%);
 }
 
-.older-posts {
-    width: 95%;
+.most-recent-item:nth-of-type(even) figure:hover img {
+    transform: translate(0, 0.5%);
+}
+
+.older-posts-section {
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+}
+
+.older-posts-section .box {
+    text-transform: uppercase;
+    width: 20vw;
+    max-height: 30vh;
+    aspect-ratio: 1/1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-size: 1.5rem;
+    flex: auto;
+}
+
+.box:nth-of-type(1) {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.2)), url('../../img/webp/skincare.webp');
+    background-position: center 60%;
+}
+
+.box:nth-of-type(2) {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)), url('../../img/webp/fashion.webp');
+    background-position: center 60%;
+}
+
+.box:nth-of-type(3) {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)), url('../../img/webp/lifestyle.webp');
+    background-position: center 60%;
+}
+
+.box:nth-of-type(4) {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)), url('../../img/webp/home.webp');
+    background-position: center 60%;
+}
+
+.box:nth-of-type(5) {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)), url('../../img/webp/beauty.webp');
+    background-position: center 60%;
+}
+
+.box:nth-of-type(6) {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)), url('../../img/webp/finds.webp');
+    background-position: center 60%;
+}
+
+.box:nth-of-type(7) {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)), url('../../img/webp/cars.webp');
+    background-position: center 60%;
+}
+
+.box:nth-of-type(8) {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)), url('../../img/webp/travel.webp');
+    background-position: center 60%;
+}
+
+.personal-blog-featured {
+    width: 90%;
     margin-block: 5%;
     margin-inline: auto;
     background-color: var(--black);
-    padding: 5%;
+    padding: 5% 5% 7.5%;
     color: var(--white);
+    column-gap: 10%;
+    align-items: flex-start;
 }
 
-.older-posts article a {
-    color: var(--brown);
+.personal-blog-featured figure {
+    height: 30vh;
+}
+
+.personal-blog-featured figure img {
+    height: 100%;
 }

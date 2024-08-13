@@ -1,0 +1,24 @@
+
+.toggle-nav-bar {
+    text-transform: uppercase;
+    grid-area: toggle-nav-bar;
+}
+
+
+@media screen and (max-width: 800px) {
+    nav.grid {
+        grid-template-areas: "toggle-nav-bar logo socials";
+    }
+
+    .toggle-nav-bar.toggle-nav-bar {
+        visibility: visible;
+    }
+
+    .nav-bar.nav-bar {
+        display: none;
+    }
+
+    .socials a {
+        display: none;
+    }
+}

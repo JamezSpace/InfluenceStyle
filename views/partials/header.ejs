@@ -1,12 +1,16 @@
+<link rel="stylesheet" href="../css/responsive/partials.css">
+
 <nav class="grid">
-    <img src="" alt="custom logo" class="logo">
+    <button type="button" class="toggle-nav-bar">menu</button>
     <ul class="nav-bar flex">
-        <a href="#">Shop</a>
         <a href="/about">About</a>
+        <a href="#">Shop</a>
         <a href="#">Blog</a>
         <a href="#">Categories</a>
-        <a href="#">Search</a>
     </ul>
+    <div class="logo">
+        <%- include('./logo') %>
+    </div>
     <%- include('./socials') %>
 </nav>
 
@@ -14,12 +18,17 @@
     nav {
         width: 95%;
         grid-template-columns: 1fr 2fr 1fr;
-        grid-template-areas: "logo nav socials";
+        grid-template-areas: "nav logo socials";
         align-items: center;
     }
 
+    .toggle-nav-bar {
+        visibility: hidden;
+    }
+     
     nav .logo {
         grid-area: logo;
+        text-align: center;
     }
 
     .nav-bar {

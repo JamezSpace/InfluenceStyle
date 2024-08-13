@@ -72,8 +72,8 @@ header .socials {
     padding: 0 5%;
 }
 
-img.logo {
-    object-fit: contain;
+.none {
+    display: none;
 }
 
 :root {
