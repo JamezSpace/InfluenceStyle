@@ -80,4 +80,7 @@ header .socials {
     --brown: #b08968;
     --black: #2e2d32;
     --white: #ffffff;
+    --font-cinzel-400: 400 "Cinzel", serif;
+    --font-poppins-400 : 400 "Poppins", sans-serif;
+    --font-poppins-500 : 500 "Poppins", sans-serif;
 }

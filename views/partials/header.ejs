@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="../css/responsive/partials.css">
 
 <nav class="grid">
-    <button type="button" class="toggle-nav-bar">menu</button>
-    <ul class="nav-bar flex">
+    <button type="button" class="toggle-nav-bar" id="open-nav-bar">menu</button>
+    <ul class="nav-bar desktop flex">
         <a href="/about">About</a>
         <a href="#">Shop</a>
         <a href="#">Blog</a>
@@ -13,30 +13,3 @@
     </div>
     <%- include('./socials') %>
 </nav>
-
-<style>
-    nav {
-        width: 95%;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-areas: "nav logo socials";
-        align-items: center;
-    }
-
-    .toggle-nav-bar {
-        visibility: hidden;
-    }
-     
-    nav .logo {
-        grid-area: logo;
-        text-align: center;
-    }
-
-    .nav-bar {
-        grid-area: nav;
-        justify-content: space-evenly;
-    }
-
-    .socials {
-        grid-area: socials;
-    }
-</style>

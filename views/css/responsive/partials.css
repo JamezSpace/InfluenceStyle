@@ -4,6 +4,79 @@
     grid-area: toggle-nav-bar;
 }
 
+.nav-background {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+    padding-inline: 30px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+
+    * {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-background.opened {
+    transform: translateY(0);
+    opacity: 1;
+
+    * {
+        animation: slideIn 150ms ease 270ms forwards;
+        animation-direction: normal;
+    }
+}
+
+.nav-background.closed {
+    * {
+        animation-direction: reverse;
+    }
+}
+
+.nav-background button {
+    font-size: 2em;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    margin-block: 20px 50px;
+    background-color: transparent;
+    color: var(--white);
+}
+
+.nav-background .nav-bar.mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.5em;
+}
+
+.nav-background .nav-bar a {
+    line-height: 2em;
+}
+
+.nav-background .mobile-socials {
+    margin-top: auto;
+    margin-bottom: 10vh;
+    font-size: 1.5em;
+}
+
+
 
 @media screen and (max-width: 800px) {
     nav.grid {
@@ -11,10 +84,10 @@
     }
 
     .toggle-nav-bar.toggle-nav-bar {
-        visibility: visible;
+        display: block;
     }
 
-    .nav-bar.nav-bar {
+    .nav-bar.desktop {
         display: none;
     }
 

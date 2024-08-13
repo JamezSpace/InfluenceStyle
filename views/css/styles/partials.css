@@ -1,0 +1,138 @@
+/* HEADER */
+nav {
+    width: 95%;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "nav logo socials";
+    align-items: center;
+}
+
+.toggle-nav-bar {
+    display: none;
+    display: none;
+    background-color: transparent;
+    padding: 5px 0;
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+ 
+nav .logo {
+    grid-area: logo;
+    text-align: center;
+}
+
+.nav-bar.desktop {
+    grid-area: nav;
+    justify-content: space-evenly;
+}
+
+.socials {
+    grid-area: socials;
+}
+
+/* LOGO */
+h2.logo {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 10px;
+    font: var(--font-cinzel-400);
+    font-size: 1.5em;
+}
+
+/* SOCIALS */
+.socials {
+    gap: 20px;
+}
+
+.socials form button {
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 1.35em;
+}
+
+.socials a {
+    font-size: 1.35em;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    display: flow-root;
+    position: relative;
+}
+
+footer form {
+    display: flow-root;
+    padding-bottom: 10%;
+    padding-top: 5%;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url('../../img/webp/footer-image.webp');
+    background-position: center 30%;
+}
+
+footer form label {
+    display: block;
+    margin-block: 20px;
+    text-transform: uppercase;
+    font-size: 1.125em;
+}
+
+footer form button {
+    width: 1.5em;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-120%);
+    background-color: transparent;
+    color: #fff;
+}
+
+.subscribe-to-newsletter {
+    border-bottom: 1px solid var(--brown);
+    padding: 10px;
+}
+
+input[type="email"] {
+    width: 35%;
+    padding: 0;
+    background-color: transparent;
+    border-bottom: 1px solid var(--brown);
+    color: inherit;
+    padding-inline: 2px 25px;
+    font-family: "Cinzel", serif;
+    font-weight: 400;
+    line-height: 2.5em;
+}
+
+input[type="email"]::placeholder {
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+.subscribe-to-newsletter button {
+    color: var(--brown);
+    background-color: transparent;
+}
+
+footer p span {
+    color: var(--brown);
+}
+
+.foot {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #111;
+    padding: 1.5% 0;
+}
+
+.foot p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    font-family: 400;
+}

@@ -6,11 +6,16 @@
     display: inline-block;
 }
 
+.padding-l-r-20 {
+    overflow-x: hidden;
+}
+
 .padding-l-r-20 h1 {
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.5em;
     margin: 5% 0;
+    font: var(--font-cinzel-400);
+    font-size: 1.5em;
 }
 
 header {
@@ -29,12 +34,20 @@ header {
     background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/webp/heros-image-4.webp');
 }
 
+.nav-bar {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.nav-bar a:hover {
+    color: var(--brown);
+}
 
 .heros {
     width: 95%;
     height: 30vh;
     padding: 0 20px;
-    margin: 30vh 0;
+    margin: 32vh 0;
     justify-content: space-between;
 }
 
@@ -68,6 +81,13 @@ header {
 
 .heros-info h3 {
     margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.heros-info h1 {
+    font: var(--font-cinzel-400);
+    font-size: 1.5em;
 }
 
 .heros-info hgroup {
@@ -81,7 +101,7 @@ header {
 .shop-content {
     gap: 10px;
     justify-content: space-between;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 /* .item {
@@ -126,6 +146,7 @@ figure::after {
     text-transform: uppercase;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+    font: var(--font-cinzel-400);
 }
 
 figure:hover img {
@@ -173,7 +194,7 @@ figure[data-num="3"]::after {
 
 .padding-l-r-20 :not(.shop) article h2 {
     text-transform: uppercase;
-    font-family: serif;
+    font: var(--font-cinzel-400);
     font-size: 1.25em;
 }
 
@@ -181,6 +202,8 @@ figure[data-num="3"]::after {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 200ms;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
 }
 
 .padding-l-r-20 :not(.shop) article a>.growing-line {
@@ -198,6 +221,11 @@ figure[data-num="3"]::after {
     width: 20px;
     margin-right: 10px;
     background-color: var(--brown);
+}
+
+.padding-l-r-20 section article p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
 
 .most-recent-item:nth-of-type(even) {

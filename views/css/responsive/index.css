@@ -1,9 +1,5 @@
 @media screen and (max-width : 790px) {
 
-    /* .shop-item>img:nth-of-type(1) {
-        width: 40vw;
-    } */
-
     .most-recent-item,
     .most-recent-item:nth-of-type(even) {
         flex-direction: column;
