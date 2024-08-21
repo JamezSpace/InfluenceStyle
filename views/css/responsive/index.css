@@ -1,4 +1,7 @@
 @media screen and (max-width : 790px) {
+    body {
+        font-size: 14px;
+    }
 
     .most-recent-item,
     .most-recent-item:nth-of-type(even) {
@@ -23,6 +26,7 @@
 }
 
 @media screen and (max-width : 490px) {
+
     figure {
         height: 40vh;
     }

@@ -19,7 +19,50 @@
 }
 
 header {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/webp/heros-image-1.webp');
+    flex-direction: column;
+    color: var(--white);
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+
+    article.slide {
+        position: relative;
+        width: 25%;
+        /* transform: rotate(5deg); */
+        /* overflow: hidden; */
+    }
+
+    /* article.slide:nth-of-type(2),
+    article.slide:nth-of-type(3) {
+        overflow: hidden;
+    } */
+
+    article.slide img.slide-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        z-index: -5;
+        /* transform: rotate(-5deg); */
+    }
+
+    /* img.slide-image[alt="blog image 4"] {
+        z-index: -1 !important;
+    }
+
+    img.slide-image[alt="blog image 3"] {
+        z-index: -2 !important;
+    }
+
+    img.slide-image[alt="blog image 2"] {
+        z-index: -3 !important;
+    }
+
+    img.slide-image[alt="blog image 1"] {
+        z-index: -4 !important;
+    } */
 }
 
 .preloaded-image-2 {
@@ -35,7 +78,6 @@ header {
 }
 
 .nav-bar {
-    font-family: "Poppins", sans-serif;
     font-weight: 400;
 }
 
@@ -44,11 +86,11 @@ header {
 }
 
 .heros {
-    width: 95%;
-    height: 30vh;
-    padding: 0 20px;
-    margin: 32vh 0;
+    width: 100%;
+    height: inherit;
+    position: absolute;
     justify-content: space-between;
+    background: linear-gradient(to bottom, rgb(0,0,0,0.4), rgb(0,0,0,0.5));
 }
 
 .heros .arrow {
@@ -77,11 +119,13 @@ header {
 
 .heros .heros-info {
     text-align: center;
+    margin-block: 40vh;
+    opacity: 0.6;
+    /* transform: rotate(-5deg); */
 }
 
 .heros-info h3 {
     margin: 0;
-    font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
 
@@ -110,7 +154,7 @@ header {
 
 .shop-item>img {
     min-width: 20vw;
-   max-height: 40vh;
+    max-height: 40vh;
     object-fit: cover;
     object-position: center;
 }
@@ -202,7 +246,6 @@ figure[data-num="3"]::after {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 200ms;
-    font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
 
@@ -224,7 +267,6 @@ figure[data-num="3"]::after {
 }
 
 .padding-l-r-20 section article p {
-    font-family: "Poppins", sans-serif;
     font-weight: 400;
 }
 

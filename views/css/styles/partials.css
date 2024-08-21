@@ -4,6 +4,7 @@ nav {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "nav logo socials";
     align-items: center;
+    z-index: 3;
 }
 
 .toggle-nav-bar {
@@ -12,8 +13,8 @@ nav {
     background-color: transparent;
     padding: 5px 0;
     color: var(--white);
-    font-family: "Poppins", sans-serif;
     font-weight: 400;
+    font-size: inherit;
 }
  
 nav .logo {
@@ -31,12 +32,13 @@ nav .logo {
 }
 
 /* LOGO */
-h2.logo {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin: 10px;
-    font: var(--font-cinzel-400);
-    font-size: 1.5em;
+
+.logo {
+    height: 30px;
+}
+.logo img {
+    height: inherit;
+    object-fit: contain;
 }
 
 /* SOCIALS */
@@ -53,6 +55,10 @@ h2.logo {
 
 .socials a {
     font-size: 1.35em;
+}
+
+.socials a:hover {
+    color: var(--brown);
 }
 
 /* FOOTER */
@@ -127,12 +133,11 @@ footer p span {
     flex-direction: column;
     justify-content: center;
     background-color: #111;
-    padding: 1.5% 0;
+    padding: 15px 0;
 }
 
 .foot p {
     margin-top: 5px;
-    margin-bottom: 10px;
-    font-family: "Poppins", sans-serif;
-    font-family: 400;
+    margin-bottom: 0;
+    font-weight: 400;
 }

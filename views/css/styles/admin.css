@@ -1,0 +1,114 @@
+@import url('../global.css');
+
+header {
+    padding-inline: 10px;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: "logo tabs-pane others";
+    align-items: center;
+}
+
+header ul {
+    margin: 0;
+}
+
+.logo {
+    grid-area: logo;
+    width: 100%;
+}
+
+.logo img {
+    width: inherit;
+}
+
+.tabs-pane {
+    grid-area: tabs-pane;
+    justify-content: center;
+    font-size: 110%;
+}
+
+.tabs-pane span {
+    padding: 7px 14px;
+    border-radius: 20px;
+    margin-inline: 7px;
+    cursor: pointer;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+.tabs-pane span:hover,
+.tabs-pane span.tab-active {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.secondary-functions {
+    grid-area: others;
+    padding-inline: 10px;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.search button {
+    font-size: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    height: 40px;
+    aspect-ratio: 1/1;
+    background-color: chartreuse;
+}
+
+.page {
+    display: none;
+    padding-inline: 20px;
+}
+
+.page.page-active {
+    display: block;
+}
+
+.new-blog-btn {
+    width: 80px;
+    border: 1.5px solid var(--brown);
+    border-radius: 8px;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    position: relative;
+    justify-content: center;
+}
+
+.new-blog-btn::after  {
+    content: '+';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+    background-color: rgb(from var(--brown) r g b /0.6);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 200ms ease, font-size 200ms ease;
+}
+
+.new-blog-btn:hover:after {
+    opacity: 1;
+    font-size: 6em;
+}
+
+.new-blog-btn:hover svg {
+    opacity: 0.3;
+    font-size: 50%;
+}
+
+.new-blog-btn svg {
+    opacity: 0.75;
+    font-size: 4em;
+    color: var(--black);
+    transition: opacity 200ms ease, font-size 200ms ease;
+}

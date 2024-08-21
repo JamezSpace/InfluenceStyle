@@ -62,9 +62,9 @@ function start_slideshow() {
     setInterval(switch_to_next, 5000)
 }
 
-addEventListener("load", () => {
-    start_slideshow()    
-})
+// addEventListener("load", () => {
+//     start_slideshow()    
+// })
 
 document.getElementById("open-nav-bar").addEventListener("click", e => {
     if (document.getElementById("mobile-nav-bar").classList.contains("closed")) document.getElementById("mobile-nav-bar").classList.replace("closed", "opened")

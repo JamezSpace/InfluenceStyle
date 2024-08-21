@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles/admin.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" async></script>
+    <title>InfluenceStyle - TheIshDeveloper</title>
+</head>
+
+<body>
+    <header class="grid">
+        <picture class="logo">
+            <source media="(prefers-color-scheme: dark)" srcset="../img/logo-dark.svg" type="image/svg+xml">
+            <img src="../img/logo-light.svg" alt="light theme logo">
+        </picture>
+        <nav class="tabs-pane flex">
+            <span class="tab tab-active" data-opens-page="overview" onclick="tab_clicked(this)">Overview</span>
+            <span class="tab" data-opens-page="blogs" onclick="tab_clicked(this)">Blogs</span>
+        </nav>
+        <ul class="secondary-functions flex">
+            <li class="search">
+                <button type="button"><iconify-icon icon="iconamoon:search"></iconify-icon></button>
+            </li>
+            <li class="profile-pic"><img src="" alt="profile picture of admin"></li>
+        </ul>
+    </header>
+    <main class="heros">
+        <div class="page page-active" data-page="overview">
+            <h2>Welcome, TheIshDeveloper</h2>
+        </div>
+        <div class="page" data-page="blogs">
+            <h2>Create a new blog</h2>
+            <a class="new-blog-btn flex" type="button" href="/admin/new-blog">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M3 14v-4c0-3.771 0-5.657 1.172-6.828S7.229 2 11 2h2c3.771 0 5.657 0 6.828 1.172c.654.653.943 1.528 1.07 2.828M21 10v4c0 3.771 0 5.657-1.172 6.828S16.771 22 13 22h-2c-3.771 0-5.657 0-6.828-1.172c-.654-.653-.943-1.528-1.07-2.828M8 14h5m-5-4h1m7 0h-4"/></svg>
+            </a>
+
+            <section class="blogs-existing"></section>
+        </div>
+    </main>
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>

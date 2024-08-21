@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:wght@200;400;500&display=swap');
+
 *,
 *::before,
 *::after {
@@ -8,6 +10,8 @@ html,
 body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif, system-ui;
 }
 
 a {
@@ -17,6 +21,7 @@ a {
 
 ul {
     padding-inline-start: 0;
+    list-style-type: none;
 }
 
 figure {
@@ -32,14 +37,7 @@ iconify-icon {
 input, button {
     border: none;
     outline: none;
-}
-
-header {
-    padding-top: 0.5%;
-    justify-content: center;
-    flex-direction: column;
-    color: var(--white);
-    background-size: cover;
+    cursor: pointer;
 }
 
 header .socials {
@@ -81,6 +79,4 @@ header .socials {
     --black: #2e2d32;
     --white: #ffffff;
     --font-cinzel-400: 400 "Cinzel", serif;
-    --font-poppins-400 : 400 "Poppins", sans-serif;
-    --font-poppins-500 : 500 "Poppins", sans-serif;
 }

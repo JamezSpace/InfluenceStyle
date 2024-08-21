@@ -1,0 +1,65 @@
+@import url('../global.css');
+
+header {
+    padding-inline: 10px;
+    justify-content: space-evenly;
+    background-color: antiquewhite;
+    margin-bottom: 1%;
+}
+
+.logo {
+    width: 50%;
+}
+
+.logo img {
+    width: inherit;
+}
+
+.profile-pic {
+    height: 50px;
+    aspect-ratio: 1;
+    background-color: aquamarine;
+    border-radius: 50%;
+}
+
+.editor-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.ql-container.ql-container {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.ql-font-cinzel {
+    font-family: "Cinzel", serif, system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* boldened Cinzel font */
+strong.ql-font-cinzel {
+    font-weight: 500;
+}
+
+.actions {
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+.actions button {
+    padding: 10px 20px;
+}
+
+.actions button#preview-blog {
+    background-color: transparent;
+    border: 1px solid var(--black);
+}
+
+.actions button#upload-blog {
+    background-color: var(--brown);
+    color: var(--white);
+}

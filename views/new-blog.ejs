@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles/new-blog.css">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js" defer></script>
+    <title>InfluenceStyle - Create Blog</title>
+</head>
+
+<body>
+    <header class="flex">
+        <picture class="logo">
+            <source media="(prefers-color-scheme: dark)" srcset="../img/logo-dark.svg" type="image/svg+xml">
+            <img src="../img/logo-light.svg" alt="light theme logo">
+        </picture>
+
+        <div class="profile-pic">
+            <img src="" alt="profile picture of admin">
+        </div>
+    </header>
+
+    <section class="editor-container">
+        <section id="my-toolbar">
+            <div class="ql-formats">
+                <select class="ql-font">
+                    <option selected>Poppins</option>
+                    <option value="cinzel">Cinzel</option>
+                    <option value="sofia">Sofia Pro</option>
+                </select>
+            </div>
+
+            <div class="ql-formats">
+                <select class="ql-size">
+                    <!-- Note a missing, thus falsy value, is used to reset to default -->
+                    <option selected></option>
+                    <option value="small"></option>
+                    <option value="large"></option>
+                    <option value="huge"></option>
+                </select>
+            </div>
+
+            <div class="ql-formats">
+                <!-- Add a bold and italicise button -->
+                <button class="ql-bold"></button>
+                <button class="ql-italic"></button>
+                <button class="ql-underline"></button>
+                <button class="ql-strike"></button>
+            </div>
+
+            <!-- Add subscript and superscript buttons -->
+            <div class="ql-formats">
+                <button class="ql-link"></button>
+                <button class="ql-image"></button>
+                <button class="ql-video"></button>
+            </div>
+
+            <div class="ql-formats">
+                <button class="ql-list" value="ordered"></button>
+                <button class="ql-list" value="bullet"></button>
+                <button class="ql-list" value="check"></button>
+            </div>
+
+            <div class="ql-formats">
+                <button class="ql-indent" value="-1"></button>
+                <button class="ql-indent" value="+1"></button>
+            </div>
+        </section>
+        <article id="editor"></article>
+        <section class="actions flex">
+            <button type="button" id="preview-blog">Preview Blog</button>
+            <button type="button" id="upload-blog">Go Live</button>
+        </section>
+    </section>
+    
+    
+    <script>
+        let quill_global;
+        addEventListener("DOMContentLoaded", () => {
+            const quill = new Quill('#editor', {
+                placeholder: 'Prepare your blog here',
+                theme: 'snow',
+                modules: {
+                    toolbar: '#my-toolbar'
+                },
+                imageUpload: {
+                    
+                }
+            });
+
+            const FontAttributor = Quill.import('attributors/class/font');
+            FontAttributor.whitelist = [
+                'cinzel',
+                'sofia'
+            ];
+
+            quill_global = quill
+        })
+    </script>
+    <script src="/js/new-blog.js"></script>
+</body>
+
+</html>

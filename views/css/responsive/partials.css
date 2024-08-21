@@ -1,6 +1,5 @@
 
 .toggle-nav-bar {
-    text-transform: uppercase;
     grid-area: toggle-nav-bar;
 }
 
@@ -55,6 +54,7 @@
     font-size: 2em;
     border-radius: 50%;
     aspect-ratio: 1/1;
+    padding: 0;
     margin-block: 20px 50px;
     background-color: transparent;
     color: var(--white);
@@ -81,6 +81,7 @@
 @media screen and (max-width: 800px) {
     nav.grid {
         grid-template-areas: "toggle-nav-bar logo socials";
+        font-size: 14px;
     }
 
     .toggle-nav-bar.toggle-nav-bar {
@@ -93,5 +94,23 @@
 
     .socials a {
         display: none;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    nav.grid {
+        font-size: 12px;
+    }
+    .logo {
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    nav.grid {
+        font-size: 12px;
+    }
+    .logo {
+        height: 20px;
     }
 }
