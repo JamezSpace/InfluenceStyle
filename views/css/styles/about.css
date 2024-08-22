@@ -5,8 +5,13 @@
 }
 
 header {
-    background-image: linear-gradient(to bottom, rgb(0,0,0,0.5), rgb(0,0,0,0.1)), url('../../img/about-heros-image.webp');
+    flex-direction: column;
+    color: var(--white);
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/webp/about-hero-image.webp');
     background-position: center 50%;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
 }
 
 .heros {
@@ -14,16 +19,18 @@ header {
 }
 
 h1 {
-    text-transform: uppercase;
+    font-family: "Cinzel", serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
-    font-size: 2.5em;
+    font-size: clamp(1.5625rem, 1.2784rem + 1.4205vw, 2.1875rem);
+    color: var(--white);
     margin: 0;
     letter-spacing: 2px;
 }
 
 .ish {
-    background-image: linear-gradient(to bottom, rgb(0,0,0,0.5), rgb(0,0,0,0.1)), url('../../img/im-ish.webp');
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/webp/im-ish.webp');
     background-position: center 50%;
+    background-size: cover;
     justify-content: center;
 }
 
@@ -40,6 +47,7 @@ h1 {
     text-transform: uppercase;
     font-size: 1.75em;
 }
+
 .socials-listed {
     justify-content: center;
     flex-direction: column;

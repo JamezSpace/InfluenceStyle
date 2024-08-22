@@ -80,3 +80,9 @@ header .socials {
     --white: #ffffff;
     --font-cinzel-400: 400 "Cinzel", serif;
 }
+
+@media screen and (max-width : 790px) {
+    body {
+        font-size: 14px;
+    }
+}

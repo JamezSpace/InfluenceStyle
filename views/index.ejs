@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="./css/styles/index.css">
     <link rel="stylesheet" href="./css/styles/partials.css">
     <link rel="stylesheet" href="./css/responsive/index.css">
+    <link rel="stylesheet" href="./css/responsive/partials.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" async></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>InfluenceStyle</title>
 </head>
 
 <body>
-    <script>AOS.init({duration : 700});</script>
+    <script>AOS.init({ duration: 700 });</script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <header class="flex" id="header">
         <aside class="nav-background flex" id="mobile-nav-bar">
             <button type="button" id="close-mobile-nav-bar">&times;</button>
@@ -35,96 +39,94 @@
             </section>
         </aside>
         <%- include('./partials/header') %>
-            <section class="arrows">
-                <span class="arrow flex" data-operation="back" onclick="switch_to_previous()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="0.5em" height="1em" viewBox="0 0 12 24">
-                        <rect width="12" height="24" fill="none" />
-                        <defs>
-                            <path id="weuiArrowOutlined0" fill="currentColor"
-                                d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
-                        </defs>
-                        <use fill-rule="evenodd" href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)" />
-                    </svg>
-                </span>
-                <span class="arrow flex" data-operation="forward" onclick="switch_to_next()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="0.5em" height="1em" viewBox="0 0 12 24">
-                        <rect width="12" height="24" fill="none" />
-                        <defs>
-                            <path id="weuiArrowOutlined0" fill="currentColor"
-                                d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
-                        </defs>
-                        <use fill-rule="evenodd" href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)" />
-                    </svg>
-                </span>
-            </section>
-            <section class="heros flex">
-                <article class="slide slide-1">
-                    <img src="./img/webp/heros-image-1.webp" alt="blog image 1" class="slide-image" loading="lazy">
-                    <main class="heros-info">
-                        <hgroup>
-                            <h3>fashion</h3>
-                            <h1>khy<br>fast fashion favourites</h1>
-                        </hgroup>
-                        <a href="#" class="btn glassmorph">read more</a>
-                    </main>
-                </article>
-                <article class="slide slide-2">
-                    <img src="./img/webp/heros-image-2.webp" alt="blog image 2" class="slide-image" loading="lazy">
-                    <main class="heros-info">
-                        <hgroup>
-                            <h3>high jewelry</h3>
-                            <h1>BVLGARI <br> Old Money Luxury</h1>
-                        </hgroup>
-                        <a href="#" class="btn glassmorph">read more</a>
-                    </main>
-                </article>
-                <article class="slide slide-3">
-                    <img src="./img/webp/heros-image-3.webp" alt="blog image 3" class="slide-image" loading="lazy">
-                    <main class="heros-info">
-                        <hgroup>
-                            <h3>runway</h3>
-                            <h1>Jennie makes her runway debut at Jacquemus show</h1>
-                        </hgroup>
-                        <a href="#" class="btn glassmorph">read more</a>
-                    </main>
-                </article>
-                <article class="slide slide-4">
-                    <img src="./img/webp/heros-image-4.webp" alt="blog image 4" class="slide-image" loading="lazy">
-                    <main class="heros-info">
-                        <hgroup>
-                            <h3>destinations</h3>
-                            <h1>OSAKA, JAPAN <br> Prepare for your next trip</h1>
-                        </hgroup>
-                        <a href="#" class="btn glassmorph">read more</a>
-                    </main>
-                </article>
-            </section>
+        <section class="swiper heros flex">
+                <div class="swiper-wrapper">
+                    <article class="slide swiper-slide">
+                        <img src="./img/webp/heros-image-1.webp" alt="blog image 1" class="slide-image" loading="lazy">
+                        <main class="heros-info">
+                            <hgroup>
+                                <h3>fashion</h3>
+                                <h1>khy<br>fast fashion favourites</h1>
+                            </hgroup>
+                            <a href="#" class="btn glassmorph">read more</a>
+                        </main>
+                    </article>
+                    <article class="slide swiper-slide">
+                        <img src="./img/webp/heros-image-2.webp" alt="blog image 2" class="slide-image" loading="lazy">
+                        <main class="heros-info">
+                            <hgroup>
+                                <h3>high jewelry</h3>
+                                <h1>BVLGARI <br> Old Money Luxury</h1>
+                            </hgroup>
+                            <a href="#" class="btn glassmorph">read more</a>
+                        </main>
+                    </article>
+                    <article class="slide swiper-slide">
+                        <img src="./img/webp/heros-image-3.webp" alt="blog image 3" class="slide-image" loading="lazy">
+                        <main class="heros-info">
+                            <hgroup>
+                                <h3>runway</h3>
+                                <h1>Jennie makes her runway debut at Jacquemus show</h1>
+                            </hgroup>
+                            <a href="#" class="btn glassmorph">read more</a>
+                        </main>
+                    </article>
+                    <article class="slide swiper-slide">
+                        <img src="./img/webp/heros-image-4.webp" alt="blog image 4" class="slide-image" loading="lazy">
+                        <main class="heros-info">
+                            <hgroup>
+                                <h3>destinations</h3>
+                                <h1>OSAKA, JAPAN <br> Prepare for your next trip</h1>
+                            </hgroup>
+                            <a href="#" class="btn glassmorph">read more</a>
+                        </main>
+                    </article>
+                </div>
+
+                <div class="swiper-pagination"></div>
+        </section>
     </header>
+
+    <script>
+        const swiper = new Swiper(".heros", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 7500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            }
+        });
+    </script>
+
     <section class="padding-l-r-20">
         <section class="shop">
             <h1 data-aos="fade-up">Shop</h1>
             <article class="shop-content flex">
-                <div class="shop-item"  data-aos="fade-left" data-aos-delay="0">
+                <div class="shop-item" data-aos="fade-left" data-aos-delay="0">
                     <img src="./img/webp/shop-item-1.webp" alt="shopping item">
                 </div>
-                <div class="shop-item"  data-aos="fade-left" data-aos-delay="200">
+                <div class="shop-item" data-aos="fade-left" data-aos-delay="200">
                     <img src="./img/webp/shop-item-2.webp" alt="shopping item">
                 </div>
-                <div class="shop-item"  data-aos="fade-left" data-aos-delay="200">
+                <div class="shop-item" data-aos="fade-left" data-aos-delay="400">
                     <img src="./img/webp/shop-item-3.webp" alt="shopping item">
                 </div>
-                <div class="shop-item"  data-aos="fade-left" data-aos-delay="200">
+                <div class="shop-item" data-aos="fade-left" data-aos-delay="600">
                     <img src="./img/webp/shop-item-4.webp" alt="shopping item">
                 </div>
             </article>
         </section>
         <section class="most-recent">
-            <h1 data-aos="fade-up">most recent</h1>
+            <h1 data-aos="fade-up" data-aos-delay="200">most recent</h1>
             <section class="most-recent-item flex">
-                <figure data-num="1" data-aos="zoom-out-right">
+                <figure data-num="1" data-aos="zoom-out-right" data-aos-delay="200">
                     <img src="./img/webp/section-image-1.webp" alt="image of a wide leg pants">
                 </figure>
-                <article data-aos="fade-up">
+                <article data-aos="fade-up" data-aos-duration="1000">
                     <h2>my obsession with wide leg pants</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, optio. Repellendus possimus ad
                         fuga aperiam iure tenetur minima a nesciunt. Perspiciatis possimus modi vitae voluptatum
@@ -136,7 +138,7 @@
                 <figure data-num="2" data-aos="zoom-out-left">
                     <img src="./img/webp/section-image-2.webp" alt="image of a glam and glitter lady">
                 </figure>
-                <article data-aos="fade-up">
+                <article data-aos="fade-up" data-aos-duration="1000">
                     <h2>tamara glam and glitter</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, optio. Repellendus possimus ad
                         fuga aperiam iure tenetur minima a nesciunt. Perspiciatis possimus modi vitae voluptatum
@@ -148,7 +150,7 @@
                 <figure data-num="3" data-aos="zoom-out-right">
                     <img src="./img/webp/section-image-3.webp" alt="image of a long nails">
                 </figure>
-                <article data-aos="fade-up">
+                <article data-aos="fade-up" data-aos-duration="1000">
                     <h2>my nails pinterest board</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, optio. Repellendus possimus ad
                         fuga aperiam iure tenetur minima a nesciunt. Perspiciatis possimus modi vitae voluptatum
@@ -172,7 +174,7 @@
             <figure>
                 <img src="./img/webp/about-me.webp" alt="image of a wrist chain">
             </figure>
-            <article data-aos="fade-up">
+            <article data-aos="fade-up" data-aos-duration="1000">
                 <h2>influence style</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, optio. Repellendus possimus ad fuga
                     aperiam iure tenetur minima a nesciunt. Perspiciatis possimus modi vitae voluptatum exercitationem
@@ -183,6 +185,7 @@
     </section>
     <%- include('./partials/footer') %>
 
+    <script src="./js/global.js"></script>
     <script src="./js/index.js"></script>
 </body>
 

@@ -1,7 +1,11 @@
 @import url('../global.css');
 
+html {
+    background-color: var(--black);
+    color: rgb(from var(--white) calc(r - 20) calc(g - 20) calc(b - 20));
+}
 header {
-    padding-inline: 10px;
+    padding: 10px;
     grid-template-columns: 1fr 2fr 2fr;
     grid-template-areas: "logo tabs-pane others";
     align-items: center;
@@ -36,7 +40,7 @@ header ul {
 
 .tabs-pane span:hover,
 .tabs-pane span.tab-active {
-    background-color: var(--black);
+    background-color: var(--brown);
     color: var(--white);
 }
 
@@ -51,13 +55,14 @@ header ul {
     font-size: 100%;
     border-radius: 50%;
     background-color: transparent;
+    color: inherit;
 }
 
 .profile-pic {
     border-radius: 50%;
     height: 40px;
     aspect-ratio: 1/1;
-    background-color: chartreuse;
+    background-color: rgb(from var(--brown) r g b /0.6);
 }
 
 .page {

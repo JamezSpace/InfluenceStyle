@@ -24,57 +24,32 @@ header {
     background-color: transparent;
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    height: 110vh;
 
     article.slide {
         position: relative;
-        width: 25%;
-        /* transform: rotate(5deg); */
-        /* overflow: hidden; */
     }
 
-    /* article.slide:nth-of-type(2),
-    article.slide:nth-of-type(3) {
-        overflow: hidden;
-    } */
+    article.slide::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: linear-gradient(to bottom, rgb(0,0,0,0.4), rgb(0,0,0,0.5));
+        z-index: -1;
+    }
 
     article.slide img.slide-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: top center;
         position: absolute;
         z-index: -5;
-        /* transform: rotate(-5deg); */
     }
 
-    /* img.slide-image[alt="blog image 4"] {
-        z-index: -1 !important;
-    }
-
-    img.slide-image[alt="blog image 3"] {
-        z-index: -2 !important;
-    }
-
-    img.slide-image[alt="blog image 2"] {
-        z-index: -3 !important;
-    }
-
-    img.slide-image[alt="blog image 1"] {
-        z-index: -4 !important;
-    } */
-}
-
-.preloaded-image-2 {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/webp/heros-image-2.webp');
-}
-
-.preloaded-image-3 {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/webp/heros-image-3.webp');
-}
-
-.preloaded-image-4 {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.1)), url('../../img/webp/heros-image-4.webp');
 }
 
 .nav-bar {
@@ -88,9 +63,8 @@ header {
 .heros {
     width: 100%;
     height: inherit;
-    position: absolute;
+    position: absolute !important;
     justify-content: space-between;
-    background: linear-gradient(to bottom, rgb(0,0,0,0.4), rgb(0,0,0,0.5));
 }
 
 .heros .arrow {
@@ -120,8 +94,7 @@ header {
 .heros .heros-info {
     text-align: center;
     margin-block: 40vh;
-    opacity: 0.6;
-    /* transform: rotate(-5deg); */
+    opacity: 0.8;
 }
 
 .heros-info h3 {
@@ -142,6 +115,16 @@ header {
     text-transform: capitalize;
 }
 
+.swiper-pagination-bullet.swiper-pagination-bullet {
+    width: 5%;
+    height: 5px;
+    border-radius: 10px;
+}
+
+.swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+    background: var(--brown);
+}
+
 .shop-content {
     gap: 10px;
     justify-content: space-between;
@@ -160,7 +143,7 @@ header {
 }
 
 .most-recent {
-    font-size: 105%;
+    font-size: 100%;
 }
 
 .most-recent-item {

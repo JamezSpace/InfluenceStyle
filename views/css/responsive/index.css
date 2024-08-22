@@ -1,8 +1,5 @@
 @media screen and (max-width : 790px) {
-    body {
-        font-size: 14px;
-    }
-
+    
     .most-recent-item,
     .most-recent-item:nth-of-type(even) {
         flex-direction: column;
@@ -27,6 +24,10 @@
 
 @media screen and (max-width : 490px) {
 
+    .heros-info {
+        font-size: 90%;
+    }
+    
     figure {
         height: 40vh;
     }

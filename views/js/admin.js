@@ -1,4 +1,4 @@
-const tabs = document.querySelectorAll("a.tab")
+const tabs = document.querySelectorAll("span.tab")
 const pages = document.querySelectorAll(".page")
 
 function tab_clicked(obj){
@@ -8,7 +8,7 @@ function tab_clicked(obj){
 
     for (let i = 0; i < tabs.length; i++) {
         const tab = tabs[i];
-   
+        
         if(tab !== obj) tab.classList.remove('tab-active')
     }
 

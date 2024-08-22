@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles/about.css">
+    <link rel="stylesheet" href="./css/styles/partials.css">
+    <link rel="stylesheet" href="./css/responsive/partials.css">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" async></script>
     <title>InfluenceStyle - About Me</title>
 </head>
 <body>
     <header class="flex">
+        <aside class="nav-background flex" id="mobile-nav-bar">
+            <button type="button" id="close-mobile-nav-bar">&times;</button>
+            <ul class="nav-bar mobile flex">
+                <a href="/about">About</a>
+                <a href="#">Shop</a>
+                <a href="#">Blog &gt;</a>
+                <a href="#">Categories &gt;</a>
+            </ul>
+            <section class="mobile-socials">
+                <a href="#">
+                    <iconify-icon icon="mdi:instagram"></iconify-icon>
+                </a>
+                <a href="#"><iconify-icon icon="mdi:pinterest"></iconify-icon></a>
+                <a href="#">
+                    <iconify-icon icon="ic:baseline-tiktok"></iconify-icon>
+                </a>
+            </section>
+        </aside>
         <%- include('./partials/header') %>
         <section class="heros">
             <h1>InfluenceStyle</h1>
@@ -54,5 +74,7 @@
         </ul>
     </section>
     <%- include('./partials/footer') %>
+
+    <script src="./js/global.js"></script>
 </body>
 </html>
