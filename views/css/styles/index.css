@@ -8,6 +8,7 @@
 
 .padding-l-r-20 {
     overflow-x: hidden;
+    overflow-y: clip;
 }
 
 .padding-l-r-20 h1 {
@@ -43,7 +44,6 @@ header {
 
     article.slide img.slide-image {
         width: 100%;
-        height: 100%;
         object-fit: cover;
         object-position: top center;
         position: absolute;
