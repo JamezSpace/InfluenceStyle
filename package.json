@@ -4,7 +4,7 @@
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "mongoose": "^8.5.3"
+    "mongoose": "^8.24.1"
   },
   "name": "influencestyle",
   "version": "1.0.0",
